@@ -3,39 +3,41 @@
 	"version": "0.1.3",
 	"license": "Apache-2.0",
 	"funding": "https://github.com/sponsors/xseman",
-	"homepage": "https://github.com/arch-group/log4js-layout-json#readme",
+	"homepage": "https://github.com/xseman/log4js-layout-json#readme",
 	"description": "json layout module for log4js",
 	"author": "Filip Seman <filip.seman@pm.me>",
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/arch-group/log4js-layout-json.git"
+		"url": "git+https://github.com/xseman/log4js-layout-json.git"
 	},
 	"scripts": {
 		"build": "tsc",
 		"pretest": "tsc",
-		"typecheck": "tsc --noEmit"
+		"typecheck": "tsc --noEmit",
+		"fmt": "dprint fmt",
+		"fmt:check": "dprint check"
 	},
 	"dependencies": {},
 	"devDependencies": {
-		"@types/node": "~18.18.0",
-		"dprint": "^0.45.0",
+		"@types/node": "^22.7.0",
+		"dprint": "^0.47.0",
 		"ts-node": "~10.9.0",
-		"typescript": "5.4.5"
+		"typescript": "^5.6.0"
 	},
 	"peerDependencies": {
 		"log4js": ">=6"
 	},
 	"types": "./dist/index.d.ts",
+	"files": [
+		"dist",
+		"!dist/*.test.*"
+	],
 	"exports": {
 		".": {
 			"import": "./dist/index.js",
 			"require": "./dist/index.js"
 		}
 	},
-	"files": [
-		"dist",
-		"!dist/*.test.*"
-	],
 	"engines": {
 		"node": ">=18.18",
 		"npm": ">=7"
