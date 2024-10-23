@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/xseman/log4js-layout-json/compare/v0.2.0...v0.2.1) (2024-10-23)
+
+
+### Maintenance
+
+* bump packages, workflows & configs ([1aaca42](https://github.com/xseman/log4js-layout-json/commit/1aaca42796f7406ef1f343264b3fd94386b61b8a))
+
 ## [0.2.0](https://github.com/arch-group/log4js-layout-json/compare/v0.1.3...v0.2.0) (2024-05-17)
 
 
