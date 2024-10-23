@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.0](https://github.com/arch-group/log4js-layout-json/compare/v0.1.3...v0.2.0) (2024-05-17)
+
+
+### Features
+
+* config log file, function name & other improvements ([45a0871](https://github.com/arch-group/log4js-layout-json/commit/45a08716ed8eb2301c1be92c2358363255a5f67f))
+
+
+### Maintenance
+
+* **chore:** update job source name ([886fe46](https://github.com/arch-group/log4js-layout-json/commit/886fe46561fefb34c042f5d6c6efbf8a63e22126))
+
 ## [0.1.3](https://github.com/arch-group/log4js-layout-json/compare/v0.1.2...v0.1.3) (2024-05-12)
 
 
