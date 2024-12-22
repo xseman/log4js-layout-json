@@ -97,7 +97,7 @@ export interface Config {
 	 */
 	includeContext?: boolean;
 	/**
-	 * Include function name in json output.
+	 * Include file name in json output.
 	 *
 	 * @default false
 	 */
@@ -111,20 +111,20 @@ export interface Config {
 	includeFunctionName?: boolean;
 }
 
-const defaults = {
-	includeContext: true,
-	includeFileName: false,
-	includeFunctionName: false,
-} satisfies Config;
-
 /**
  * Creates a JSON layout function for log4js.
  */
 export function layout(config?: Config): log4js.LayoutFunction {
-	config = Object.assign({}, defaults, config);
+	const defaults = {
+		includeContext: true,
+		includeFileName: false,
+		includeFunctionName: false,
+	};
 
-	return function layout(event: log4js.LoggingEvent): string {
-		const formated = format(event, config);
+	const _config = Object.assign({}, defaults, config);
+
+	return (event: log4js.LoggingEvent): string => {
+		const formated = format(event, _config);
 		const output = JSON.stringify(formated);
 
 		return output;
