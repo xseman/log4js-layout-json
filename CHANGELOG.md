@@ -1,5 +1,23 @@
 # Changelog
 
+## [0.2.1](https://github.com/xseman/log4js-layout-json/compare/v0.2.0...v0.2.1) (2024-12-22)
+
+
+### Maintenance
+
+* bump packages, workflows & configs ([1aaca42](https://github.com/xseman/log4js-layout-json/commit/1aaca42796f7406ef1f343264b3fd94386b61b8a))
+* update workflows & configs ([e567344](https://github.com/xseman/log4js-layout-json/commit/e567344f76bd2eb8a45c51fe654bfa67d2400b44))
+
+
+### Refactors
+
+* typo and config creation ([ea4eff3](https://github.com/xseman/log4js-layout-json/commit/ea4eff3145d727a294d0b04b197ac380785fcda0))
+
+
+### Tests
+
+* add basic tests ([d45b634](https://github.com/xseman/log4js-layout-json/commit/d45b6347c6cc2c95b0ada23617bf6876f8371d47))
+
 ## [0.2.0](https://github.com/arch-group/log4js-layout-json/compare/v0.1.3...v0.2.0) (2024-05-17)
 
 
