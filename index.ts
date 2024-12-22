@@ -47,7 +47,7 @@ function parseFileName(loggingEvent: log4js.LoggingEvent): string | undefined {
 /**
  * Formats a log event into the desired output format
  */
-function format(event: log4js.LoggingEvent, config?: Config): Output {
+export function format(event: log4js.LoggingEvent, config?: Config): Output {
 	const output: Output = {
 		time: event.startTime,
 		category: event.categoryName,
