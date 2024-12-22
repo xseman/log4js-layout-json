@@ -17,7 +17,7 @@
 		"importDeclaration.forceMultiLine": "whenMultiple"
 	},
 	"includes": [
-		"**/*.{ts,js,json,md,yml,yaml}"
+		"**/*.{ts,mts,json,md,yml,yaml}"
 	],
 	"excludes": [
 		"**/node_modules",
