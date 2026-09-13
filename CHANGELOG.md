@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.2](https://github.com/xseman/log4js-layout-json/compare/v0.2.1...v0.2.2) (2026-09-13)
+
+
+### Build System
+
+* migrate to bun & publish via npm trusted publisher ([#8](https://github.com/xseman/log4js-layout-json/issues/8)) ([1aceefb](https://github.com/xseman/log4js-layout-json/commit/1aceefb2c81c1546bc5dd1f354d611c18ed7e881))
+
 ## [0.2.1](https://github.com/xseman/log4js-layout-json/compare/v0.2.0...v0.2.1) (2024-12-22)
 
 

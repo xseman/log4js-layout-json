@@ -1,7 +1,7 @@
 {
 	"name": "log4js-layout-json",
 	"description": "Log4js json layout module",
-	"version": "0.2.1",
+	"version": "0.2.2",
 	"license": "Apache-2.0",
 	"author": "Filip Seman <filip.seman@pm.me>",
 	"funding": "https://github.com/sponsors/xseman",
