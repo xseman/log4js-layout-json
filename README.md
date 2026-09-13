@@ -6,10 +6,10 @@ Simple json layout module for [log4js][log4js_github].
 
 ## Installation
 
-### npm registry
-
 ```sh
 npm install log4js-layout-json
+# or
+bun add log4js-layout-json
 ```
 
 ## Example Output
@@ -45,7 +45,7 @@ Each log object contains the following properties:
 
 ```ts
 import log4js from "log4js";
-import { layout as jsonLayout } from "log4js-json-layout";
+import { layout as jsonLayout } from "log4js-layout-json";
 
 log4js.addLayout("json", jsonLayout);
 ```
