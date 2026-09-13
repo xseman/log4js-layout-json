@@ -1,43 +1,55 @@
 {
 	"name": "log4js-layout-json",
+	"description": "Log4js json layout module",
 	"version": "0.2.1",
 	"license": "Apache-2.0",
+	"author": "Filip Seman <filip.seman@pm.me>",
 	"funding": "https://github.com/sponsors/xseman",
 	"homepage": "https://github.com/xseman/log4js-layout-json#readme",
-	"description": "Log4js json layout module",
-	"author": "Filip Seman <filip.seman@pm.me>",
+	"keywords": [
+		"logging",
+		"log",
+		"log4js",
+		"log4js-node",
+		"layout",
+		"json"
+	],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/xseman/log4js-layout-json.git"
 	},
 	"scripts": {
-		"build": "tsc",
+		"prebuild": "node -e \"fs.rmSync('lib',{recursive:true,force:true})\"",
+		"build": "tsc --build",
 		"fmt": "dprint fmt",
 		"fmt:check": "dprint check",
 		"typecheck": "tsc --noEmit",
-		"pretest": "tsc",
-		"test": "TS_NODE_TRANSPILE_ONLY=true node --no-warnings --test --experimental-test-coverage --test-reporter=spec --loader=ts-node/esm *.test.mts",
-		"test:watch": "TS_NODE_TRANSPILE_ONLY=true node --no-warnings --test --test-reporter=spec --watch --loader=ts-node/esm *.test.mts"
+		"typecheck:test": "tsc -p tsconfig.test.json",
+		"test": "bun test src/ --coverage --coverage-reporter=text --coverage-reporter=lcov",
+		"test:watch": "bun test src/ --watch --coverage"
 	},
 	"peerDependencies": {
 		"log4js": ">=6"
 	},
-	"dependencies": {},
 	"devDependencies": {
-		"@types/node": "^22.7.0",
-		"dprint": "^0.47.0",
-		"ts-node": "~10.9.0",
-		"typescript": "^5.7.0"
+		"@types/bun": "^1.4.2",
+		"@types/node": "^24.13.3",
+		"dprint": "~0.57.4",
+		"log4js": "^6.9.1",
+		"typescript": "~7.0.2"
 	},
-	"types": "./dist/index.d.ts",
+	"types": "./lib/index.d.ts",
 	"exports": {
+		"./package.json": "./package.json",
 		".": {
-			"import": "./dist/index.js",
-			"require": "./dist/index.js"
+			"types": "./lib/index.d.ts",
+			"import": "./lib/index.js",
+			"require": "./lib/index.js"
 		}
 	},
 	"files": [
-		"dist",
-		"!dist/*.test.*"
+		"lib/**/*.js",
+		"lib/**/*.d.ts",
+		"!lib/**/*_test*"
 	]
 }
