@@ -80,10 +80,8 @@ export function format(event: log4js.LoggingEvent, config?: Config): Output {
 		.filter((m) => isNativeError(m) || typeof m !== "object")
 		.filter(Boolean);
 
-	output.msg = util.format(...msgs);
-
-	if (output.msg === undefined) {
-		delete output.msg;
+	if (msgs.length > 0) {
+		output.msg = util.format(...msgs);
 	}
 
 	return output;

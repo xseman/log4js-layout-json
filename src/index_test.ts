@@ -67,6 +67,31 @@ describe("format", () => {
 	});
 });
 
+describe("format edge cases", () => {
+	test("resolves file name from a file URL", () => {
+		const event = new LoggingEvent("default", levels.INFO, ["test"], {}, {
+			fileName: "file:///srv/app/main.mjs",
+		});
+		const result = format(event, { includeFileName: true });
+
+		expect(result.file_name).toBe("main.mjs");
+	});
+
+	test("accepts non-array event data", () => {
+		const event = new LoggingEvent("default", levels.INFO, "plain", {});
+		const result = format(event);
+
+		expect(result.msg).toBe("plain");
+	});
+
+	test("omits msg when the event has no printable data", () => {
+		const result = format(makeEvent([{ only: "object" }]));
+
+		expect(result).not.toHaveProperty("msg");
+		expect(JSON.parse(layout()(makeEvent([{ only: "object" }])))).not.toHaveProperty("msg");
+	});
+});
+
 describe("layout", () => {
 	test("returns json with context by default", () => {
 		const output = layout()(makeEvent());
